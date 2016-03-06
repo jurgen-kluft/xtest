@@ -7,8 +7,7 @@ import (
 
 // GetProject returns the package object of 'xbase'
 func GetProject() *denv.Project {
-	xcode.SetupDefaultCppProject("xtest", "github.com\\jurgen-kluft")
+	project := xcode.SetupDefaultCppProject("xtest", "github.com\\jurgen-kluft")
 	project.Dependencies = append(project.Dependencies, xbase.GetProject())
-
 	return project
 }

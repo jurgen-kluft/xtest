@@ -1,0 +1,8 @@
+package: github.com/jurgen-kluft/xtest
+import:
+- package: github.com/jurgen-kluft/xbase
+  subpackages:
+  - package
+- package: github.com/jurgen-kluft/xcode
+  subpackages:
+  - denv
