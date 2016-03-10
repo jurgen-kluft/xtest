@@ -7,7 +7,7 @@ import (
 // GetPackage returns the package object of 'xtest'
 func GetPackage() *denv.Package {
 
-	// 'xtest' library
+	// 'xtest' application
 	mainapp := denv.SetupDefaultCppAppProject("xtest", "github.com\\jurgen-kluft\\xtest")
 
 	mainpkg := denv.NewPackage("xtest")
