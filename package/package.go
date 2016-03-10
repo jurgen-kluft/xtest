@@ -1,13 +1,16 @@
-package xbase
+package xtest
 
 import (
-	"github.com/jurgen-kluft/xbase/package"
 	"github.com/jurgen-kluft/xcode/denv"
 )
 
-// GetProject returns the package object of 'xbase'
-func GetProject() *denv.Project {
-	project := xcode.SetupDefaultCppProject("xtest", "github.com\\jurgen-kluft")
-	project.Dependencies = append(project.Dependencies, xbase.GetProject())
-	return project
+// GetPackage returns the package object of 'xtest'
+func GetPackage() *denv.Package {
+
+	// 'xtest' library
+	mainapp := denv.SetupDefaultCppAppProject("xtest", "github.com\\jurgen-kluft\\xtest")
+
+	mainpkg := denv.NewPackage("xtest")
+	mainpkg.AddMainApp(mainapp)
+	return mainpkg
 }

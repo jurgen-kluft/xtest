@@ -6,3 +6,6 @@ import:
 - package: github.com/jurgen-kluft/xcode
   subpackages:
   - denv
+- package: github.com/jurgen-kluft/xtest
+  subpackages:
+  - package
