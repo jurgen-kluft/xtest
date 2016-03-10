@@ -10,11 +10,14 @@ func GetPackage() *denv.Package {
 	// dependencies
 	xbasepkg := xbase.GetPackage()
 
+	// The main (xtest) package
+	mainpkg := denv.NewPackage("xtest")
+	mainpkg.AddPackage(xbasepkg)
+
 	// 'xtest' application
 	mainapp := denv.SetupDefaultCppAppProject("xtest", "github.com\\jurgen-kluft\\xtest")
 	mainapp.Dependencies = append(mainapp.Dependencies, xbasepkg.GetMainLib())
-
-	mainpkg := denv.NewPackage("xtest")
 	mainpkg.AddMainApp(mainapp)
+
 	return mainpkg
 }
