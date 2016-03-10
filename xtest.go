@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/jurgen-kluft/xtest/package"
 	"github.com/jurgen-kluft/xcode"
+	"github.com/jurgen-kluft/xtest/package"
 )
 
 func main() {
-	xcode.Generate(xtest.GetProject())
+	xcode.Generate(xtest.GetPackage())
 }
