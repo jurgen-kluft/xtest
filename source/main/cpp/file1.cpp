@@ -7,3 +7,6 @@ void create_main_allocator()
 }
 
 
+void main() {
+
+}
